@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+       .fruits-container li{
+            color: tomato;
+        }
+        #Fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to my DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus sint perspiciatis, ab quas beatae magni earum nostrum recusandae consequatur atque, minus eligendi enim hic itaque modi laboriosam excepturi qui!</p>
+
+</header>  
+<main id="main-container">
+    <section>
+        <h1>My Awesome DOM de baba</h1>
+    <ul>
+        <li>Jalali Set</li>
+        <li>Shafayet</li>
+        <li>Bonobash</li>
+    </ul>
+    </section>
+    <section class="fruits-container">
+        <h1 id="Fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Carrot</li>
+    </ul>
+    </section>
+    <section id="places-container">
+        <h1 id="places">Places I like to visit</h1>
+        <ul id="places-list">
+            <li class="important-places" >sundarban</li>
+            <li class="important-places">bandorban</li>
+            <li class="important-places">katabon</li>
+        </ul>
+    </section>
+</main>  
+<script src="js/dom.js">
+   
+</script>
+<script src="js/append.js"></script>
+<script src="js/stylelink.js"></script>
+
+<script>
+    //getElementsByTagName
+ const liCollection = document.getElementsByTagName('li');
+ for(let li of liCollection){
+    //console.log(li.innerText);
+ }
+ const head = document.getElementsByTagName('h1')
+ for(h1 of head){
+    //console.log(h1.innerText);
+ 
+ }
+ //getElementById
+ const fruitsTitle = document.getElementById('Fruits-title')
+ fruitsTitle.innerText = 'fruits change by js'
+ const places = document.getElementsByClassName('important-places')
+ for(const place of places){
+    //console.log(place.innerText)
+    }
+ //querySelectorALL
+let someLi = document.querySelectorAll('.fruits-container li')
+//console.log(someLi)
+for(const li of someLi){
+    //console.log(li.innerText)
+}
+ </script>
+</body>
+</html>
