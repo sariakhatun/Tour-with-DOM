@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summery</title>
+</head>
+<body>
+    <h1>DOM Events Summery</h1>
+    <input type="text" name="" id="name-input" placeholder="Your Name">
+    <button onclick="addName()">Add Name</button>
+    <button id="add-name">Add Name 2</button>
+    <div id="name-container">
+
+    </div>
+    <script>
+        function addName(){
+            //console.log('button clicked')
+            let nameInput=document.getElementById('name-input')
+            let newName = nameInput.value
+           // console.log(newName)
+           let nameContainer = document.getElementById('name-container')
+           let p = document.createElement('p');
+           p.innerText=newName
+           //append
+           nameContainer.appendChild(p)
+           nameInput.value = ''
+        }
+        //add listener
+        document.getElementById('add-name').addEventListener('click', function(){
+            
+        })
+    </script>
+</body>
+</html>
